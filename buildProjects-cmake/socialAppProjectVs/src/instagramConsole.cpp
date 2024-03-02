@@ -87,13 +87,25 @@ void InstagramConsole::processChoice(char choice) {
     }
 }
 
+// string InstagramConsole::getPasswordFromUser() {
+//             std::string password;
+//             std::cout << "Enter new password:";
+//             cin >> password;
+//             return password;
+// }
 string InstagramConsole::getPasswordFromUser() {
-            std::string password;
-            std::cout << "Enter new password:";
-            cin >> password;
-            return password;
-}
+    std::string password;
 
+    std::cout << "Enter your password: ";
+    std::getline(std::cin, password);
+
+    std::string validationMessage = validatePassword(password);
+    if (!validationMessage.empty()) {
+        std::cout << validationMessage;
+        return "";
+    }
+    return 0;
+}
 void InstagramConsole::adminOptions() {
     char adminChoice;
     do {
@@ -214,8 +226,7 @@ void InstagramConsole::login() {
         return;
     }
 
-    cout << "Enter your password: ";
-    cin >> password;
+    getPasswordFromUser();
 
     if (userManager.authenticateUser(username, password)) {
         cout << "Authentication successful. Welcome, " << username << "!\n";
@@ -228,6 +239,8 @@ void InstagramConsole::login() {
     }
 }
 
+
+
 std::string InstagramConsole::validateUserName (const std::string& userName) {
     if (userName.empty()) {
         return "Invalid! Username cannot be empty.\n";
@@ -238,6 +251,17 @@ std::string InstagramConsole::validateUserName (const std::string& userName) {
     }
     return "";
 }
+
+std::string InstagramConsole::validatePassword(const std::string& password) {
+        if (password.empty()) {
+            return "Invalid! Password cannot be empty.\n";
+        }
+
+        if (password.find(' ') != std::string::npos) {
+            return "Invalid! Password cannot contain space.\n";
+        }
+        return "";
+    }
 
 void InstagramConsole::signup() {
     string username, password;

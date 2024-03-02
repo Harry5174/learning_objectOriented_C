@@ -31,6 +31,7 @@ public:
     void postMessage();
 
     std::string getPasswordFromUser();
+    std::string validatePassword(const std::string& password);
 
     // Functionality-related functions
     void runInstagramFunctionality();

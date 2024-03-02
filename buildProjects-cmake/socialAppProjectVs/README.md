@@ -24,8 +24,9 @@ This C++ console-based project implements a simplified version of Instagram func
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Harry5174
-   cd InstagramConsole
+    git clone https://github.com/Harry5174/objectOriented-C.git
+    cd objectOriented-C/buildProjects-cmake/socialAppProjectVs
+
    ```
 
 2. Build the project using CMake:

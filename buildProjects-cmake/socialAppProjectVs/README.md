@@ -63,7 +63,7 @@ Special thanks to [Ayesha Nadeem](https://github.com/Ayesha-Nadeem27) for their 
 ## Authors and Acknowledgments
 
 - Project created by Harry.
-- [Ayesha Nadeem](https://github.com/Ayesha-Nadeem27) - Contributor.
+- [Ayesha Nadeem](https://github.com/Ayesha-Nadeem27)  - Contributor.
 
 ## License
 

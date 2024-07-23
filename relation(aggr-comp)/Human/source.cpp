@@ -7,10 +7,10 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
 	int x = argc -1;
-//	cout<<"Argument count except exe. file: "<<argc-1<<endl;
+	cout<<"Argument count except exe. file: "<<argc-1<<endl;
 	if ( x % 2 != 0 )
 	{
-//		cout<<x<<endl;
+
 		cerr<<"usage: " << argv[0] << " <Organ1> <Function1> <Organ2> <Function2> ...\n";
 		return 1;
 	}
@@ -19,7 +19,6 @@ int main(int argc, char* argv[]) {
 	
 	for (int i = 1; i<argc ; i+=2) {
 		
-//		cout<<i<<endl<<i+1<<endl;
 		string organName = argv[i];
 		string organFunction = argv[i+1];
 		
